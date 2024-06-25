@@ -18,12 +18,10 @@
 		5285C42C2C2A859A00C25F6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C42B2C2A859A00C25F6A /* NetworkManager.swift */; };
 		52996FE52C2A8A760016D5D8 /* UsermodelResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 52996FE42C2A8A750016D5D8 /* UsermodelResponse.json */; };
 		52996FE72C2A8AD60016D5D8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996FE62C2A8AD60016D5D8 /* ModelData.swift */; };
-		666A5C432EE4D94DC75B67A6 /* Pods_Prodev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19B2A09B702FADED250BDE56 /* Pods-Prodev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prodev.release.xcconfig"; path = "Target Support Files/Pods-Prodev/Pods-Prodev.release.xcconfig"; sourceTree = "<group>"; };
-		5285C4052C2A790B00C25F6A /* Prodev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prodev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5285C4052C2A790B00C25F6A /* Prodev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Prodev.app; path = "/Users/macbookpro/Downloads/Prodev/Prodev/build/Debug-iphoneos/Prodev.app"; sourceTree = "<absolute>"; };
 		5285C4082C2A790B00C25F6A /* ProdevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdevApp.swift; sourceTree = "<group>"; };
 		5285C40A2C2A790B00C25F6A /* UsersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersScreen.swift; sourceTree = "<group>"; };
 		5285C40C2C2A790F00C25F6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,8 +33,6 @@
 		5285C42B2C2A859A00C25F6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		52996FE42C2A8A750016D5D8 /* UsermodelResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsermodelResponse.json; sourceTree = "<group>"; };
 		52996FE62C2A8AD60016D5D8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prodev.debug.xcconfig"; path = "Target Support Files/Pods-Prodev/Pods-Prodev.debug.xcconfig"; sourceTree = "<group>"; };
-		FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prodev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,38 +40,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				666A5C432EE4D94DC75B67A6 /* Pods_Prodev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38A77F5591FC4334771B789E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */,
-				19B2A09B702FADED250BDE56 /* Pods-Prodev.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		5285C3FC2C2A790B00C25F6A = {
 			isa = PBXGroup;
 			children = (
 				5285C4072C2A790B00C25F6A /* Prodev */,
-				5285C4062C2A790B00C25F6A /* Products */,
-				38A77F5591FC4334771B789E /* Pods */,
-				EB303A123AEF6F10AE160455 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		5285C4062C2A790B00C25F6A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5285C4052C2A790B00C25F6A /* Prodev.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5285C4072C2A790B00C25F6A /* Prodev */ = {
@@ -152,14 +127,6 @@
 			path = SearchTFBOX;
 			sourceTree = "<group>";
 		};
-		EB303A123AEF6F10AE160455 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,7 +173,7 @@
 				Base,
 			);
 			mainGroup = 5285C3FC2C2A790B00C25F6A;
-			productRefGroup = 5285C4062C2A790B00C25F6A /* Products */;
+			productRefGroup = 5285C3FC2C2A790B00C25F6A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -405,7 +372,6 @@
 		};
 		5285C4142C2A790F00C25F6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,7 +402,6 @@
 		};
 		5285C4152C2A790F00C25F6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19B2A09B702FADED250BDE56 /* Pods-Prodev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
