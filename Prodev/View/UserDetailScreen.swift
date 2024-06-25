@@ -9,7 +9,6 @@ import SwiftUI
 struct UserDetailScreen: View {
     
     let userDetails: UserModel
-    //@Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         
