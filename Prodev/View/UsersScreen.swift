@@ -20,6 +20,11 @@ struct UsersScreen: View {
                 } else {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 5) {
+                            Text("Gift an NFT")
+                                .font(.largeTitle)
+                                .bold()
+                                .padding(.leading)
+                                .foregroundColor(.white)
                             SearchTFBOX(searchText: $viewModel.searchText)
                             VStack(alignment: .leading, spacing: 20) {
                                 ForEach(viewModel.filterUserWithNameorUserName(), id: \.id) { user in
@@ -91,20 +96,22 @@ struct UsersScreen: View {
                     }
                 }
             }
+            
             .onAppear {
                 viewModel.getUsers()
             }
             .background(
                 ZStack {
                     Color.indigo
-                        .edgesIgnoringSafeArea(.all)
+                        .edgesIgnoringSafeArea(.top)
                 }
                     .frame(width: UIScreen.main.bounds.width, height: 250) // Adjust the height as needed
                     .padding(.bottom, 500) // Offset the title to align with the navigation bar
             )
-            .navigationTitle("Gift an NFT")
+            
             .foregroundColor(.white)
-            .navigationBarTitleDisplayMode(.automatic)
+            .navigationBarTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing:
                                     Button("Select All") {
                 viewModel.toggleSelectAllUsers()
@@ -112,6 +119,7 @@ struct UsersScreen: View {
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(.white)
             )
+            
         }
     }
     
