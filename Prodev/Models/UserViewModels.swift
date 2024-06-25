@@ -60,6 +60,7 @@ class UserViewModels: ObservableObject {
             }
         }
     }
+    
     //MARK: Select All Users
     func toggleSelectAllUsers() {
         if selectedUser.count == users.count {
@@ -68,4 +69,5 @@ class UserViewModels: ObservableObject {
             selectedUser = Set(users)
         }
     }
+    
 }
