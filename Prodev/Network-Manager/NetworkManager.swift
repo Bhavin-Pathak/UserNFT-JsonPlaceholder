@@ -20,6 +20,7 @@ class APIManager {
         // Make a network request using Alamofire to fetch users
         AF.request(url).responseDecodable(of: [UserModel].self) { response in
             // Call the completion handler with the result of the request
+            debugPrint("Chore your API Result Will Be: \(response.result)")
             completion(response.result)
         }
     }

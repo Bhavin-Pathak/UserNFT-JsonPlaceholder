@@ -16,6 +16,8 @@
 		5285C4222C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C4212C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift */; };
 		5285C4252C2A828100C25F6A /* UserViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C4242C2A828100C25F6A /* UserViewModels.swift */; };
 		5285C42C2C2A859A00C25F6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C42B2C2A859A00C25F6A /* NetworkManager.swift */; };
+		52996FE52C2A8A760016D5D8 /* UsermodelResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 52996FE42C2A8A750016D5D8 /* UsermodelResponse.json */; };
+		52996FE72C2A8AD60016D5D8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996FE62C2A8AD60016D5D8 /* ModelData.swift */; };
 		666A5C432EE4D94DC75B67A6 /* Pods_Prodev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		5285C4212C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinateDelegation.swift; sourceTree = "<group>"; };
 		5285C4242C2A828100C25F6A /* UserViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModels.swift; sourceTree = "<group>"; };
 		5285C42B2C2A859A00C25F6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		52996FE42C2A8A750016D5D8 /* UsermodelResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsermodelResponse.json; sourceTree = "<group>"; };
+		52996FE62C2A8AD60016D5D8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prodev.debug.xcconfig"; path = "Target Support Files/Pods-Prodev/Pods-Prodev.debug.xcconfig"; sourceTree = "<group>"; };
 		FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prodev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				5285C40F2C2A790F00C25F6A /* Preview Assets.xcassets */,
+				52996FE42C2A8A750016D5D8 /* UsermodelResponse.json */,
+				52996FE62C2A8AD60016D5D8 /* ModelData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -132,7 +138,6 @@
 		5285C41D2C2A7E0800C25F6A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5285C4232C2A81E800C25F6A /* SelectionUserRow */,
 				5285C4202C2A7FAA00C25F6A /* SearchTFBOX */,
 			);
 			path = Components;
@@ -145,13 +150,6 @@
 				5285C4212C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift */,
 			);
 			path = SearchTFBOX;
-			sourceTree = "<group>";
-		};
-		5285C4232C2A81E800C25F6A /* SelectionUserRow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SelectionUserRow;
 			sourceTree = "<group>";
 		};
 		EB303A123AEF6F10AE160455 /* Frameworks */ = {
@@ -224,6 +222,7 @@
 			files = (
 				5285C4102C2A790F00C25F6A /* Preview Assets.xcassets in Resources */,
 				5285C40D2C2A790F00C25F6A /* Assets.xcassets in Resources */,
+				52996FE52C2A8A760016D5D8 /* UsermodelResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +280,7 @@
 				5285C41F2C2A7E2400C25F6A /* SearchTF.swift in Sources */,
 				5285C42C2C2A859A00C25F6A /* NetworkManager.swift in Sources */,
 				5285C41C2C2A7B2F00C25F6A /* UserModel.swift in Sources */,
+				52996FE72C2A8AD60016D5D8 /* ModelData.swift in Sources */,
 				5285C4092C2A790B00C25F6A /* ProdevApp.swift in Sources */,
 				5285C4222C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift in Sources */,
 			);

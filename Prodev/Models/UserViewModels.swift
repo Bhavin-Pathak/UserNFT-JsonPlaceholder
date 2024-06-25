@@ -31,11 +31,12 @@ class UserViewModels: ObservableObject {
                 // Update the users property on the main thread
                 DispatchQueue.main.async {
                     self?.users = user
+                    debugPrint("Chore Your Sucess Result is \(user)")
                 }
                 // If fetching users fails
             case .failure(let error):
                 // Print the error to the console
-                print("Error fetching contacts: \(error)")
+                print("Error fetching Users: \(error)")
             }
         }
     }
@@ -53,4 +54,12 @@ class UserViewModels: ObservableObject {
             }
         }
     }
+    //MARK: Select All Users
+    func toggleSelectAllUsers() {
+            if selectedUser.count == users.count {
+                selectedUser.removeAll()
+            } else {
+                selectedUser = Set(users)
+            }
+        }
 }
