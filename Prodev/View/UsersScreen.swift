@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UsersScreen: View {
+    //MARK: Stateobject form viewmodel
     @StateObject private var viewModel = UserViewModels()
     
     var body: some View {
@@ -64,7 +65,6 @@ struct UsersScreen: View {
                                 }
                             }
                             .padding([.leading, .trailing])
-                            
                             HStack {
                                 Button {
                                     printSelectedContacts()
@@ -96,7 +96,6 @@ struct UsersScreen: View {
                     }
                 }
             }
-            
             .onAppear {
                 viewModel.getUsers()
             }
@@ -108,7 +107,6 @@ struct UsersScreen: View {
                     .frame(width: UIScreen.main.bounds.width, height: 250) // Adjust the height as needed
                     .padding(.bottom, 500) // Offset the title to align with the navigation bar
             )
-            
             .foregroundColor(.white)
             .navigationBarTitle("")
             .navigationBarTitleDisplayMode(.inline)
@@ -119,7 +117,6 @@ struct UsersScreen: View {
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(.white)
             )
-            
         }
     }
     

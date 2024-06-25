@@ -20,6 +20,7 @@
 		52996FE52C2A8A760016D5D8 /* UsermodelResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 52996FE42C2A8A750016D5D8 /* UsermodelResponse.json */; };
 		52996FE72C2A8AD60016D5D8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996FE62C2A8AD60016D5D8 /* ModelData.swift */; };
 		52A2FAE52C2ADA3200BF3ED2 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FAE42C2ADA3200BF3ED2 /* UserDetailScreen.swift */; };
+		52AC28382C2B3480000226E4 /* UserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC28372C2B3480000226E4 /* UserScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		52996FE62C2A8AD60016D5D8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		52A2FAE32C2AD21100BF3ED2 /* Prodev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prodev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A2FAE42C2ADA3200BF3ED2 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
+		52AC28372C2B3480000226E4 /* UserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				5285C41D2C2A7E0800C25F6A /* Components */,
 				5285C40A2C2A790B00C25F6A /* UsersScreen.swift */,
 				52A2FAE42C2ADA3200BF3ED2 /* UserDetailScreen.swift */,
+				52AC28372C2B3480000226E4 /* UserScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				5285C42C2C2A859A00C25F6A /* NetworkManager.swift in Sources */,
 				52A2FAE52C2ADA3200BF3ED2 /* UserDetailScreen.swift in Sources */,
 				5285C41C2C2A7B2F00C25F6A /* UserModel.swift in Sources */,
+				52AC28382C2B3480000226E4 /* UserScreen.swift in Sources */,
 				52996FE72C2A8AD60016D5D8 /* ModelData.swift in Sources */,
 				5285C4092C2A790B00C25F6A /* ProdevApp.swift in Sources */,
 				5285C4222C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift in Sources */,
