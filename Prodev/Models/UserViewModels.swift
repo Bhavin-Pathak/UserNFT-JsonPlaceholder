@@ -24,29 +24,29 @@ class UserViewModels: ObservableObject {
     
     // Method to fetch users from the API
     func getUsers() {
-            // Set isLoading to true before fetching data
-            isLoading = true
-            // Call the fetchUsers method from APIManager
-            APIManager.shared.fetchUsers { [weak self] result in
-                // Set isLoading to false after fetching data
+        // Set isLoading to true before fetching data
+        isLoading = true
+        // Call the fetchUsers method from APIManager
+        APIManager.shared.fetchUsers { [weak self] result in
+            // Set isLoading to false after fetching data
+            DispatchQueue.main.async {
+                self?.isLoading = false
+            }
+            switch result {
+                // If fetching users is successful
+            case .success(let user):
+                // Update the users property on the main thread
                 DispatchQueue.main.async {
-                    self?.isLoading = false
+                    self?.users = user
+                    debugPrint("Chore Your Success Result is \(user)")
                 }
-                switch result {
-                    // If fetching users is successful
-                case .success(let user):
-                    // Update the users property on the main thread
-                    DispatchQueue.main.async {
-                        self?.users = user
-                        debugPrint("Chore Your Success Result is \(user)")
-                    }
-                    // If fetching users fails
-                case .failure(let error):
-                    // Print the error to the console
-                    print("Error fetching Users: \(error)")
-                }
+                // If fetching users fails
+            case .failure(let error):
+                // Print the error to the console
+                print("Error fetching Users: \(error)")
             }
         }
+    }
     
     // Method to filter users by name or username based on searchText
     func filterUserWithNameorUserName() -> [UserModel] {
@@ -56,17 +56,16 @@ class UserViewModels: ObservableObject {
         } else {
             // Otherwise, filter users whose name or username contains searchText
             return users.filter {
-                $0.name.lowercased().contains(searchText.lowercased()) ||
-                $0.username.lowercased().contains(searchText.lowercased())
+                $0.name.lowercased().contains(searchText.lowercased()) || $0.username.lowercased().contains(searchText.lowercased())
             }
         }
     }
     //MARK: Select All Users
     func toggleSelectAllUsers() {
-            if selectedUser.count == users.count {
-                selectedUser.removeAll()
-            } else {
-                selectedUser = Set(users)
-            }
+        if selectedUser.count == users.count {
+            selectedUser.removeAll()
+        } else {
+            selectedUser = Set(users)
         }
+    }
 }
