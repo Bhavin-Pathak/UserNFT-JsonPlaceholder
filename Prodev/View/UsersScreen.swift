@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct UsersScreen: View {
+    
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView{
+            ZStack{
+                Color(.systemIndigo)
+                VStack{
+                    Image(systemName: "person")
+                }
+            }
+            .edgesIgnoringSafeArea(.all)
+            .navigationTitle("Gift an NFT")
+            .navigationBarTitleDisplayMode(.large)
+            .navigationBarItems(trailing: HStack{
+                Button("Select all") {
+                    //MARK: 
+                }
+                .buttonStyle(.plain)
+                .foregroundColor(.white)
+            })
+            
         }
-        .padding()
+        
     }
 }
 
