@@ -15,11 +15,12 @@
 		5285C41F2C2A7E2400C25F6A /* SearchTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C41E2C2A7E2400C25F6A /* SearchTF.swift */; };
 		5285C4222C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C4212C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift */; };
 		5285C4252C2A828100C25F6A /* UserViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C4242C2A828100C25F6A /* UserViewModels.swift */; };
-		5285C4282C2A851800C25F6A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5285C4272C2A851800C25F6A /* Alamofire */; };
-		5285C42A2C2A851800C25F6A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5285C4292C2A851800C25F6A /* AlamofireDynamic */; };
+		5285C42C2C2A859A00C25F6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C42B2C2A859A00C25F6A /* NetworkManager.swift */; };
+		666A5C432EE4D94DC75B67A6 /* Pods_Prodev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19B2A09B702FADED250BDE56 /* Pods-Prodev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prodev.release.xcconfig"; path = "Target Support Files/Pods-Prodev/Pods-Prodev.release.xcconfig"; sourceTree = "<group>"; };
 		5285C4052C2A790B00C25F6A /* Prodev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prodev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5285C4082C2A790B00C25F6A /* ProdevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdevApp.swift; sourceTree = "<group>"; };
 		5285C40A2C2A790B00C25F6A /* UsersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersScreen.swift; sourceTree = "<group>"; };
@@ -29,6 +30,9 @@
 		5285C41E2C2A7E2400C25F6A /* SearchTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTF.swift; sourceTree = "<group>"; };
 		5285C4212C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinateDelegation.swift; sourceTree = "<group>"; };
 		5285C4242C2A828100C25F6A /* UserViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModels.swift; sourceTree = "<group>"; };
+		5285C42B2C2A859A00C25F6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prodev.debug.xcconfig"; path = "Target Support Files/Pods-Prodev/Pods-Prodev.debug.xcconfig"; sourceTree = "<group>"; };
+		FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prodev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,19 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5285C4282C2A851800C25F6A /* Alamofire in Frameworks */,
-				5285C42A2C2A851800C25F6A /* AlamofireDynamic in Frameworks */,
+				666A5C432EE4D94DC75B67A6 /* Pods_Prodev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38A77F5591FC4334771B789E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */,
+				19B2A09B702FADED250BDE56 /* Pods-Prodev.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5285C3FC2C2A790B00C25F6A = {
 			isa = PBXGroup;
 			children = (
 				5285C4072C2A790B00C25F6A /* Prodev */,
 				5285C4062C2A790B00C25F6A /* Products */,
+				38A77F5591FC4334771B789E /* Pods */,
+				EB303A123AEF6F10AE160455 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +124,7 @@
 		5285C4192C2A79E400C25F6A /* Network-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5285C42B2C2A859A00C25F6A /* NetworkManager.swift */,
 			);
 			path = "Network-Manager";
 			sourceTree = "<group>";
@@ -139,6 +154,14 @@
 			path = SelectionUserRow;
 			sourceTree = "<group>";
 		};
+		EB303A123AEF6F10AE160455 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBC95566DB2A5625BD65801D /* Pods_Prodev.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,19 +169,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5285C4132C2A790F00C25F6A /* Build configuration list for PBXNativeTarget "Prodev" */;
 			buildPhases = (
+				8828ACA008024F5BDA2BA0FF /* [CP] Check Pods Manifest.lock */,
 				5285C4012C2A790B00C25F6A /* Sources */,
 				5285C4022C2A790B00C25F6A /* Frameworks */,
 				5285C4032C2A790B00C25F6A /* Resources */,
+				B174AECBD218A9EC2A60B1E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Prodev;
-			packageProductDependencies = (
-				5285C4272C2A851800C25F6A /* Alamofire */,
-				5285C4292C2A851800C25F6A /* AlamofireDynamic */,
-			);
 			productName = Prodev;
 			productReference = 5285C4052C2A790B00C25F6A /* Prodev.app */;
 			productType = "com.apple.product-type.application";
@@ -187,9 +208,6 @@
 				Base,
 			);
 			mainGroup = 5285C3FC2C2A790B00C25F6A;
-			packageReferences = (
-				5285C4262C2A851800C25F6A /* XCRemoteSwiftPackageReference "Alamofire" */,
-			);
 			productRefGroup = 5285C4062C2A790B00C25F6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,6 +229,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8828ACA008024F5BDA2BA0FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prodev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B174AECBD218A9EC2A60B1E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Prodev/Pods-Prodev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Prodev/Pods-Prodev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Prodev/Pods-Prodev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5285C4012C2A790B00C25F6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -219,6 +279,7 @@
 				5285C40B2C2A790B00C25F6A /* UsersScreen.swift in Sources */,
 				5285C4252C2A828100C25F6A /* UserViewModels.swift in Sources */,
 				5285C41F2C2A7E2400C25F6A /* SearchTF.swift in Sources */,
+				5285C42C2C2A859A00C25F6A /* NetworkManager.swift in Sources */,
 				5285C41C2C2A7B2F00C25F6A /* UserModel.swift in Sources */,
 				5285C4092C2A790B00C25F6A /* ProdevApp.swift in Sources */,
 				5285C4222C2A7FCA00C25F6A /* SearchCoordinateDelegation.swift in Sources */,
@@ -344,6 +405,7 @@
 		};
 		5285C4142C2A790F00C25F6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB4F6BA915C144117DE68A3 /* Pods-Prodev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -355,8 +417,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,6 +425,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = x.Prodev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,6 +436,7 @@
 		};
 		5285C4152C2A790F00C25F6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B2A09B702FADED250BDE56 /* Pods-Prodev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -383,8 +448,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +456,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = x.Prodev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,30 +487,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5285C4262C2A851800C25F6A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5285C4272C2A851800C25F6A /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5285C4262C2A851800C25F6A /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		5285C4292C2A851800C25F6A /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5285C4262C2A851800C25F6A /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5285C3FD2C2A790B00C25F6A /* Project object */;
 }
