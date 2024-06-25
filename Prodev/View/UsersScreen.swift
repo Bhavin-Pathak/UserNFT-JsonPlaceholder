@@ -2,10 +2,8 @@
 //  ContentView.swift
 //  Prodev
 //
-//  Created by MacBookPro on 04/04/1946 Saka.
+//  Created by Bhavin Pathak on 25/06/2024
 //
-
-import SwiftUI
 
 import SwiftUI
 
@@ -14,79 +12,87 @@ struct UsersScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack() {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 5){
-                        SearchTFBOX(searchText: $viewModel.searchText)
-                        VStack (alignment: .leading,spacing: 20){
-                            ForEach(viewModel.filterUserWithNameorUserName(), id: \.id){ user in
-                                Button {
-                                    if viewModel.selectedUser.contains(user) {
-                                        viewModel.selectedUser.remove(user)
-                                    } else {
-                                        viewModel.selectedUser.insert(user)
-                                    }
-                                } label: {
-                                    HStack() {
-                                        Image("userprofile")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 45, height: 45)
-                                            .clipShape(Circle())
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text(user.name)
-                                                .font(Font.custom("Inter", size: 17).weight(.bold))
-                                                .foregroundColor(.black)
-                                            
-                                            Text("@\(user.username)")
-                                                .font(Font.custom("Inter", size: 15))
-                                                .foregroundColor(.gray)
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView("Loading users...")
+                        .progressViewStyle(CircularProgressViewStyle(tint: .black))
+                        .scaleEffect(1.5, anchor: .center)
+                } else {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 5) {
+                            SearchTFBOX(searchText: $viewModel.searchText)
+                            VStack(alignment: .leading, spacing: 20) {
+                                ForEach(viewModel.filterUserWithNameorUserName(), id: \.id) { user in
+                                    Button {
+                                        if viewModel.selectedUser.contains(user) {
+                                            viewModel.selectedUser.remove(user)
+                                        } else {
+                                            viewModel.selectedUser.insert(user)
                                         }
-                                        
-                                        Spacer()
-                                        Image(systemName: viewModel.selectedUser.contains(user) ? "checkmark.circle.fill" : "circle")
-                                            .resizable()
-                                            .frame(width: 22, height: 22)
-                                            .foregroundColor(viewModel.selectedUser.contains(user) ? .blue : .gray)
-                                        
+                                    } label: {
+                                        HStack {
+                                            Image("userprofile")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 45, height: 45)
+                                                .clipShape(Circle())
+                                            
+                                            VStack(alignment: .leading) {
+                                                Text(user.name)
+                                                    .font(Font.custom("Inter", size: 17).weight(.bold))
+                                                    .foregroundColor(.black)
+                                                
+                                                Text("@\(user.username)")
+                                                    .font(Font.custom("Inter", size: 15))
+                                                    .foregroundColor(.gray)
+                                            }
+                                            
+                                            Spacer()
+                                            Image(systemName: viewModel.selectedUser.contains(user) ? "checkmark.circle.fill" : "circle")
+                                                .resizable()
+                                                .frame(width: 22, height: 22)
+                                                .foregroundColor(viewModel.selectedUser.contains(user) ? .blue : .gray)
+                                            
+                                        }
+                                        .multilineTextAlignment(.leading)
                                     }
-                                    .multilineTextAlignment(.leading)
                                 }
                             }
-                        }
-                        .padding([.leading, .trailing])
-                        HStack{
-                            Button {
-                                printSelectedContacts()
-                            } label: {
-                                Text("Send Gift  \(Image(systemName: "chevron.right.circle"))")
-                                    .bold()
-                                    .frame(maxWidth: .infinity)
-                                    .padding(10)
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                                    .foregroundColor(.white)
-                            }
-                            .buttonStyle(PlainButtonStyle())
+                            .padding([.leading, .trailing])
                             
-                            Button {
-                                //
-                            } label: {
+                            HStack {
+                                Button {
+                                    printSelectedContacts()
+                                } label: {
+                                    Text("Send Gift  \(Image(systemName: "chevron.right.circle"))")
+                                        .bold()
+                                        .frame(maxWidth: .infinity)
+                                        .padding(10)
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                        .foregroundColor(.white)
+                                }
+                                .buttonStyle(PlainButtonStyle())
                                 
-                                Text("Share App  \(Image(systemName: "paperplane"))")
-                                    .bold()
-                                    .frame(maxWidth: .infinity)
-                                    .padding(10)
-                                    .cornerRadius(10)
-                                    .foregroundColor(.blue)
-                                
+                                Button {
+                                    // Add your share app action here
+                                } label: {
+                                    Text("Share App  \(Image(systemName: "paperplane"))")
+                                        .bold()
+                                        .frame(maxWidth: .infinity)
+                                        .padding(10)
+                                        .cornerRadius(10)
+                                        .foregroundColor(.blue)
+                                }
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .padding([.top, .leading, .trailing], 35)
                         }
-                        .padding([.top, .leading, .trailing], 35)
                     }
                 }
+            }
+            .onAppear {
+                viewModel.getUsers()
             }
             .background(
                 ZStack {
@@ -102,8 +108,8 @@ struct UsersScreen: View {
             .navigationBarItems(trailing:
                                     Button("Select All") {
                 viewModel.toggleSelectAllUsers()
-                //MARK: Select all user
-            }.buttonStyle(PlainButtonStyle())
+            }
+                .buttonStyle(PlainButtonStyle())
                 .foregroundColor(.white)
             )
         }
@@ -114,7 +120,6 @@ struct UsersScreen: View {
             print("Selected Users: Name is \(selectedUsers.name) and Username is \(selectedUsers.username)")
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
