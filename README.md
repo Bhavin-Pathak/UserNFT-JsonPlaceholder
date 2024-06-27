@@ -4,18 +4,13 @@
 A list of users data from JSONPlaceholder API Endpoint Where You Can search users with their username or name and get userdetails 
 
 
-## API Reference
+## API Endpoint
 
-#### Get all items
+#### Get all users
 
 ```http
-  GET /api/items
+  https://jsonplaceholder.typicode.com/users
 ```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
 ## Run Locally
 
 Clone the project
@@ -34,6 +29,27 @@ Run Project On Xcode
 
 ```bash
   Prodev.xcodeproj
-
 ```
+
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
+
+## Authors
+
+- [@Bhavinpathak](https://github.com/Bhavin-Pathak)
+
+
+## Support
+
+- dev.pathakbhavin@gmail.com 
+
+
+## Demo
 
