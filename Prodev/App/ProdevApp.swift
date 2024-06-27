@@ -12,7 +12,7 @@ struct ProdevApp: App {
     
     var body: some Scene {
         WindowGroup {
-            UserScreen()
+            UsersScreen()
         }
     }
 }
