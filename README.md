@@ -31,7 +31,7 @@ Run Project On Xcode
   Prodev.xcodeproj
 ```
 
-## Demo
+## Preview 
 
 https://github.com/Bhavin-Pathak/UserNFT-JsonPlaceholder/assets/105209903/9e7a66f6-1ae8-4d2c-8857-a978b9378c56
 
