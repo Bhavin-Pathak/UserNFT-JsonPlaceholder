@@ -31,26 +31,6 @@ Run Project On Xcode
   Prodev.xcodeproj
 ```
 
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-
-## Authors
-
-- [@Bhavinpathak](https://github.com/Bhavin-Pathak)
-
-
-## Support
-
-- dev.pathakbhavin@gmail.com 
-
-
 ## Demo
 
 https://github.com/Bhavin-Pathak/UserNFT-JsonPlaceholder/assets/105209903/9e7a66f6-1ae8-4d2c-8857-a978b9378c56
